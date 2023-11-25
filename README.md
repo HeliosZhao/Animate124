@@ -9,11 +9,9 @@ This repository is the official implementation of **Animate124**.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://animate124.github.io/) [![arXiv](https://img.shields.io/badge/arXiv-2305.08850-b31b1b.svg)](https://arxiv.org/abs/2305.08850)
 
-[![Watch the video](https://img.youtube.com/vi/L_1HCBhz9MM?si=f4pn2uwajrc7BmrM/hqdefault.jpg)](https://www.youtube.com/embed/L_1HCBhz9MM?si=f4pn2uwajrc7BmrM)
 
+https://github.com/HeliosZhao/Animate124/assets/43061147/282e5855-8c40-4375-ab29-f23a18952c1b
 
-[<img src="https://img.youtube.com/vi/L_1HCBhz9MM?si=f4pn2uwajrc7BmrM/hqdefault.jpg" width="600" height="300"
-/>](https://www.youtube.com/embed/L_1HCBhz9MM?si=f4pn2uwajrc7BmrM)
 
 
 ## Abstract
