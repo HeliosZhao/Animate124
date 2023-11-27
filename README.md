@@ -2,12 +2,12 @@
 
 This repository is the official implementation of **Animate124**.
 
-**[Animate124: Animating One Image to 4D Dynamic Scene](https://arxiv.org/abs/2305.08850)**
+**[Animate124: Animating One Image to 4D Dynamic Scene](https://arxiv.org/abs/2311.14603)**
 <br/>
 [Yuyang Zhao](https://yuyangzhao.com), [Zhiwen Yan](https://jokeryan.github.io/about/), [Enze Xie](https://xieenze.github.io/), [Lanqing Hong](https://scholar.google.com.sg/citations?user=2p7x6OUAAAAJ&hl=en), [Zhenguo Li](https://scholar.google.com.sg/citations?user=XboZC1AAAAAJ&hl=en), [Gim Hee Lee](https://www.comp.nus.edu.sg/~leegh/)
 <br/>
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://animate124.github.io/) [![arXiv](https://img.shields.io/badge/arXiv-2305.08850-b31b1b.svg)](https://arxiv.org/abs/2305.08850)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://animate124.github.io/) [![arXiv](https://img.shields.io/badge/arXiv-2311.14603-b31b1b.svg)](https://arxiv.org/abs/2311.14603)
 
 
 https://github.com/HeliosZhao/Animate124/assets/43061147/282e5855-8c40-4375-ab29-f23a18952c1b
@@ -27,7 +27,7 @@ If you make use of our work, please cite our paper.
 @article{zhao2023animate124,
   author={Zhao, Yuyang and Yan, Zhiwen and Xie, Enze and Hong, Lanqing and Li, Zhenguo and Lee, Gim Hee},
   title={Animate124: Animating One Image to 4D Dynamic Scene},
-  journal={Arxiv},
+  journal={arXiv preprint arXiv:2311.14603},
   year={2023}
 }
 ```
