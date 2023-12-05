@@ -65,7 +65,7 @@ Animate124 uses the default [textual inversion](https://huggingface.co/docs/diff
 ```
 bash scripts/textual_inversion/textual_inversion_sd.sh $GPU $DATA_NAME $TOKEN_NAME $TOKEN_INIT
 ```
-`$TOKEN_NAME` is a the special token, usually name that by _examplename_
+`$TOKEN_NAME` is a the special token, usually name that by `_examplename_`
 
 `$TOKEN_INIT` is a single token to describe the image using natural language
 
