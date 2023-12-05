@@ -50,7 +50,7 @@ Download [MiDaS](https://github.com/isl-org/MiDaS) for depth estimation
 
 ## Run
 
-The whole training process includes 4 steps: textual inversion, static stage, dynamic coarse stage and dynamic fine stage. The first three steps requires 40GB VRAM while the final steps requires 80GB VRAM.
+The whole training process includes 4 steps: textual inversion, static stage, dynamic coarse stage and dynamic fine stage. The first three steps require 40GB VRAM while the final step requires 80GB VRAM.
 
 ### Preprocess
 We have included all preprocessed files in `./data` directory. Preprocessing is only necessary if you want to test on your own examples. Takes seconds.   
@@ -60,12 +60,13 @@ python preprocess_image.py --path /path/to/image
 
 
 #### Step 1: textual inversion 
-Animate124 uses the default [textual inversion](https://huggingface.co/docs/diffusers/training/text_inversion) from diffuers, which consumes around 2 hours on a 32G V100. To run textual inversion: 
+Animate124 uses the default [textual inversion](https://huggingface.co/docs/diffusers/training/text_inversion) from diffuers. To run textual inversion: 
 
 ```
 bash scripts/textual_inversion/textual_inversion_sd.sh $GPU $DATA_NAME $TOKEN_NAME $TOKEN_INIT
 ```
 `$TOKEN_NAME` is a the special token, usually name that by _examplename_
+
 `$TOKEN_INIT` is a single token to describe the image using natural language
 
 For example:
@@ -107,7 +108,7 @@ For example:
 bash scripts/animate124/run-cn.sh $GPU run run run panda-dance "a panda is dancing" "a <token> is dancing"
 ```
 
-The overall training scripts for examples in `./data` are in `scripts/run-$DATA_NAME`
+The overall training scripts for examples in `./data` are in `scripts/run_data`
 
 ## Citation
 If you make use of our work, please cite our paper.
