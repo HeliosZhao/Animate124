@@ -372,13 +372,15 @@ class NeRFNetwork(NeRFRenderer):
             if tplane.embeddings.grad is not None:
                 tplane.grad_total_variation(weight, inputs, bound, B)
 
-    def TV_loss(self, ):
-        # ipdb.set_trace()
+    def TV_loss(self, B=100000):
         num_time_size = self.time_grid_size - 1
+        inputs = torch.rand(B, 3, device=self.encoder[0].embeddings.device) # 0-1
+        inputs = (inputs * 2 * self.bound) - self.bound # -bound, bound
+
         total = 0
         for i in range(num_time_size):
-            x1 = self.encoder[i].embeddings # N,2
-            x2 = self.encoder[i+1].embeddings # N,2
+            x1 = self.encoder[i](inputs, bound=self.bound) # N,2
+            x2 = self.encoder[i+1](inputs, bound=self.bound) # N,2
             total = total + ((x1 - x2)**2).sum(-1).mean()
 
         total = total / (num_time_size * self.encoder[0].num_levels)
