@@ -17,6 +17,18 @@ from threestudio.utils.misc import C, parse_version
 from threestudio.utils.typing import *
 from .controlnet.stable_diffusion_controlnet_img2img import StableDiffusionControlNetImg2ImgPipeline
 
+def center_crop_to_square(tensor):
+    _, _, h, w = tensor.shape
+    min_size = min(h, w)
+    
+    # Calculate the top, left corner of the cropped image
+    top = (h - min_size) // 2
+    left = (w - min_size) // 2
+
+    # Crop the image
+    cropped_tensor = tensor[:, :, top:top + min_size, left:left + min_size]
+
+    return cropped_tensor
 
 
 @threestudio.register("animate124-controlnet-tile-guidance")
@@ -295,8 +307,9 @@ class ControlNetGuidance(BaseObject):
             rgb, cond_rgb = rgb[indices], cond_rgb[indices]
             batch_size = self.cfg.fixed_frames
 
-        rgb_BCHW = rgb.permute(0, 3, 1, 2)
-        cond_rgb_BCHW = cond_rgb.permute(0, 3, 1, 2).detach()
+        ## add support to rectangle images, center crop to square
+        rgb_BCHW = center_crop_to_square( rgb.permute(0, 3, 1, 2) ) # B,C,H,W
+        cond_rgb_BCHW = center_crop_to_square( cond_rgb.permute(0, 3, 1, 2).detach() )
         latents: Float[Tensor, "B 4 DH DW"]
         if self.cfg.fixed_size > 0:
             RH, RW = self.cfg.fixed_size, self.cfg.fixed_size

@@ -53,8 +53,8 @@ data:
     num_frames: 16 #16
     simultan: true
     prob_single_view_video: 1.0
-    width_vid: 128 #
-    height_vid: 128 #
+    width_vid: 144 
+    height_vid: 80 
     sample_rand_frames: fps
     num_frames_factor: 4
     eval_height: 256
