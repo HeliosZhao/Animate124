@@ -90,26 +90,26 @@ STATIC_PROMPT="a high resolution DSLR image of panda"
 DYNAMIC_PROMPT="a panda is dancing"
 CN_PROMPT="a <token> is dancing"
 
-# Stage 1
+# --------- Stage 1 (Static Stage) --------- #
 python launch.py --config custom/threestudio-animate124/configs/animate124-stage1.yaml --train --gpu $gpu \
 data.image.image_path=custom/threestudio-animate124/load/${DATA_DIR}/_rgba.png \
 system.prompt_processor.prompt="${STATIC_PROMPT}"
 
-## stage 2
-ckpt=outputs/animate124-stage1/STATIC_PROMPT_underline@timestamp/ckpts/last.ckpt
+# --------- Stage 2 (Dynamic Coarse Stage) --------- #
+ckpt=outputs/animate124-stage1/${STATIC_PROMPT}@LAST/ckpts/last.ckpt
 python launch.py --config custom/threestudio-animate124/configs/animate124-stage2-ms.yaml --train --gpu $gpu \
 data.image.image_path=custom/threestudio-animate124/load/${DATA_DIR}/_rgba.png \
 system.prompt_processor.prompt="${DYNAMIC_PROMPT}" \
-system.weights=$ckpt
+system.weights="$ckpt"
 
-## stage 3
-ckpt=outputs/animate124-stage2/DYNAMIC_PROMPT_underline@timestamp/ckpts/last.ckpt
+# --------- Stage 2 (Semantic Refinement Stage) --------- #
+ckpt=outputs/animate124-stage2/${DYNAMIC_PROMPT}@LAST/ckpts/last.ckpt
 python launch.py --config custom/threestudio-animate124/configs/animate124-stage3-ms.yaml --train --gpu $gpu \
 data.image.image_path=custom/threestudio-animate124/load/${DATA_DIR}/_rgba.png \
 system.prompt_processor.prompt="${DYNAMIC_PROMPT}" \
 system.prompt_processor_cn.prompt="${CN_PROMPT}" \
 system.prompt_processor_cn.learned_embeds_path=custom/threestudio-animate124/load/${DATA_DIR}/learned_embeds.bin \
-system.weights=$ckpt
+system.weights="$ckpt"
 
 ```
 

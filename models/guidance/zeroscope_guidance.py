@@ -16,7 +16,7 @@ from tqdm import tqdm
 from transformers import CLIPTextModel, CLIPTokenizer
 
 
-@threestudio.register("zeroscope-guidance")
+@threestudio.register("animate124-zeroscope-guidance")
 class ZeroscopeGuidance(BaseObject):
     @dataclass
     class Config(BaseObject.Config):

@@ -12,7 +12,7 @@ from threestudio.utils.ops import chunk_batch
 from threestudio.utils.typing import *
 
 
-@threestudio.register("dynamic-nerf-volume-renderer")
+@threestudio.register("animate124-nerf-volume-renderer")
 class NeRFVolumeRenderer(VolumeRenderer):
     @dataclass
     class Config(VolumeRenderer.Config):

@@ -19,7 +19,7 @@ from .controlnet.stable_diffusion_controlnet_img2img import StableDiffusionContr
 
 
 
-@threestudio.register("stable-diffusion-controlnet-tile-guidance")
+@threestudio.register("animate124-controlnet-tile-guidance")
 class ControlNetGuidance(BaseObject):
     @dataclass
     class Config(BaseObject.Config):

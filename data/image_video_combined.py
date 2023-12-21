@@ -15,7 +15,7 @@ from threestudio.utils.typing import *
 from torch.utils.data import DataLoader, Dataset, IterableDataset
 
 
-from .uncond import (
+from .video_uncond import (
     RandomCameraDataModuleConfig,
     RandomCameraDataset,
     RandomCameraIterableDataset,
@@ -64,7 +64,7 @@ class RandomImageVideoCameraIterableDataset(IterableDataset, Updateable):
         return batch
 
 
-@register("image-video-combined-camera-datamodule")
+@register("animate124-image-video-combined-camera-datamodule")
 class ImageVideoCombinedCameraDataModule(pl.LightningDataModule):
     cfg: RandomCameraDataModuleConfig
 

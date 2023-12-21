@@ -1,4 +1,4 @@
 from . import (
     image_video_combined,
-    uncond,
+    video_uncond,
 )

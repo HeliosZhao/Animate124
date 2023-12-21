@@ -11,7 +11,7 @@ from threestudio.utils.typing import *
 from transformers import CLIPTextModel, CLIPTokenizer
 
 
-@threestudio.register("zeroscope-prompt-processor")
+@threestudio.register("animate124-zeroscope-prompt-processor")
 class ZeroscopePromptProcessor(PromptProcessor):
     @dataclass
     class Config(PromptProcessor.Config):

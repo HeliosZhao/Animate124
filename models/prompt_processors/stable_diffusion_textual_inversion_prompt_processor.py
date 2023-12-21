@@ -12,7 +12,7 @@ from threestudio.utils.misc import cleanup
 from threestudio.utils.typing import *
 from threestudio.models.prompt_processors.base import PromptProcessor, hash_prompt
 
-@threestudio.register("sd-ti-prompt-processor")
+@threestudio.register("animate124-textual-inversion-prompt-processor")
 class SDTextualInversionPromptProcessor(PromptProcessor):
     @dataclass
     class Config(PromptProcessor.Config):
