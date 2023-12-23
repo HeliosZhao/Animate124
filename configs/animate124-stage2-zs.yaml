@@ -109,7 +109,7 @@ system:
 
   guidance_3d_type: "zero123-unified-guidance"
   guidance_3d:
-    pretrained_model_name_or_path: "checkpoints/zero123-xl-diffusers"
+    pretrained_model_name_or_path: "bennyguo/zero123-diffusers"
     guidance_type: "sds"
     guidance_scale: 5.0
     min_step_percent: 0.2
@@ -123,14 +123,14 @@ system:
 
   prompt_processor_type: "animate124-zeroscope-prompt-processor"
   prompt_processor:
-    pretrained_model_name_or_path: "checkpoints/zeroscope_v2_576w"
+    pretrained_model_name_or_path: "cerspense/zeroscope_v2_576w"
     prompt: ???
     spawn: False
 
   guidance_type: "animate124-zeroscope-guidance"
   guidance:
     weighting_strategy: sds
-    pretrained_model_name_or_path: "checkpoints/zeroscope_v2_576w"
+    pretrained_model_name_or_path: "cerspense/zeroscope_v2_576w"
     guidance_scale: 100.
     min_step_percent: 0.02
     max_step_percent: 0.98

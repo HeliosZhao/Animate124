@@ -88,7 +88,7 @@ system:
 
   guidance_3d_type: "zero123-unified-guidance"
   guidance_3d:
-    pretrained_model_name_or_path: "checkpoints/zero123-xl-diffusers"
+    pretrained_model_name_or_path: "bennyguo/zero123-xl-diffusers"
     guidance_type: "sds"
     guidance_scale: 5.0
     min_step_percent: 0.2
@@ -102,14 +102,14 @@ system:
 
   prompt_processor_type: "stable-diffusion-prompt-processor"
   prompt_processor:
-    pretrained_model_name_or_path: "checkpoints/stable-diffusion-v1-5"
+    pretrained_model_name_or_path: "runwayml/stable-diffusion-v1-5"
     prompt: ???
     spawn: False
 
   guidance_type: "stable-diffusion-unified-guidance"
   guidance:
     guidance_type: "sds"
-    pretrained_model_name_or_path: "checkpoints/stable-diffusion-v1-5"
+    pretrained_model_name_or_path: "runwayml/stable-diffusion-v1-5"
     guidance_scale: 100.
     min_step_percent: 0.2
     max_step_percent: 0.6

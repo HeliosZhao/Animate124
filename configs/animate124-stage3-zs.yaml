@@ -109,7 +109,7 @@ system:
 
   guidance_3d_type: "zero123-unified-guidance"
   guidance_3d:
-    pretrained_model_name_or_path: "checkpoints/zero123-xl-diffusers"
+    pretrained_model_name_or_path: "bennyguo/zero123-diffusers"
     guidance_type: "sds"
     guidance_scale: 5.0
     min_step_percent: 0.2
@@ -123,14 +123,14 @@ system:
 
   prompt_processor_type: "animate124-zeroscope-prompt-processor"
   prompt_processor:
-    pretrained_model_name_or_path: "checkpoints/zeroscope_v2_576w"
+    pretrained_model_name_or_path: "cerspense/zeroscope_v2_576w"
     prompt: ???
     spawn: False
 
   guidance_type: "animate124-zeroscope-guidance"
   guidance:
     weighting_strategy: sds
-    pretrained_model_name_or_path: "checkpoints/zeroscope_v2_576w"
+    pretrained_model_name_or_path: "cerspense/zeroscope_v2_576w"
     guidance_scale: 100.
     min_step_percent: 0.02
     max_step_percent: 0.98
@@ -140,15 +140,15 @@ system:
   sr: true 
   prompt_processor_cn_type: "animate124-textual-inversion-prompt-processor"
   prompt_processor_cn:
-    pretrained_model_name_or_path: "checkpoints/stable-diffusion-v1-5"
+    pretrained_model_name_or_path: "runwayml/stable-diffusion-v1-5"
     learned_embeds_path: ???
     prompt: ???
     spawn: False
 
   guidance_cn_type: "animate124-controlnet-tile-guidance"
   guidance_cn:
-    pretrained_model_name_or_path: "checkpoints/stable-diffusion-v1-5"
-    controlnet_name_or_path: "checkpoints/controlnet-v11/control_v11f1e_sd15_tile"
+    pretrained_model_name_or_path: "runwayml/stable-diffusion-v1-5"
+    controlnet_name_or_path: "lllyasviel/control_v11f1e_sd15_tile"
     guidance_scale: 7.5
     min_step_percent: 0.02
     max_step_percent: 0.98

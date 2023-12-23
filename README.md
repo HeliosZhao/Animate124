@@ -1,45 +1,23 @@
 # Animate124 - threestudio
 
+<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/4c745058-d41f-47dc-aa98-25e06fe602d8" width="" height="200">
+<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/fcf3a7c1-62b4-458b-904e-2749411b7fa6" width="" height="200">
+
 | [Project Page](https://animate124.github.io/) | [Paper](https://arxiv.org/pdf/2311.14603) | [Official Code](https://github.com/HeliosZhao/Animate124) |
 
-This is Animate124 extension of [threestudio](https://github.com/threestudio-project/threestudio). The original implementation can be found [here](https://github.com/HeliosZhao/Animate124). The backbone (4D hash grid) and some hyperparameters of this implementation differ from those of the original one, so the results might be different. 
+This is Animate124 extension of [threestudio](https://github.com/threestudio-project/threestudio). The original implementation can be found [at the main branch](https://github.com/HeliosZhao/Animate124/tree/main). To use it, please install threestudio first and then install this extension in threestudio custom directory.
+
+**NOTE**: The backbone (4D hash grid) and some hyperparameters of this implementation differ from those of the original one, so the results might be different. 
 
 ## Installation
 
-### Install threestudio
-
-**This part is the same as original threestudio. Skip it if you already have installed the environment.**
-
-- You must have an NVIDIA graphics card with at least 24GB VRAM and have [CUDA](https://developer.nvidia.com/cuda-downloads) installed.
-- Install `Python >= 3.8`.
-- (Optional, Recommended) Create a virtual environment:
-
 ```sh
-python3 -m virtualenv venv
-. venv/bin/activate
+cd custom
+git clone -b threestudio https://github.com/HeliosZhao/Animate124.git
+mv Animate124 threestudio-animate124
 
-# Newer pip versions, e.g. pip-23.x, can be much faster than old versions, e.g. pip-20.x.
-# For instance, it caches the wheels of git packages to avoid unnecessarily rebuilding them later.
-python3 -m pip install --upgrade pip
-```
-
-- Install `PyTorch >= 1.12`. We have tested on `torch2.0.1+cu117`, but other versions should also work fine.
-
-```sh
-# torch2.0.1+cu117
-pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
-```
-
-- (Optional, Recommended) Install ninja to speed up the compilation of CUDA extensions:
-
-```sh
-pip install ninja
-```
-
-- Install dependencies:
-
-```sh
-pip install -r requirements.txt
+# If you want to use your custom image, please install background remover
+pip install backgroundremover
 ```
 
 
@@ -112,6 +90,19 @@ system.prompt_processor_cn.learned_embeds_path=custom/threestudio-animate124/loa
 system.weights="$ckpt"
 
 ```
+## Run with your custom image
+To run with your custom image, first you need preprocess images to remove background and get depth/normal maps. You can also get image caption with the following script.
+```sh
+# preprocess images
+cd custom/threestudio-animate124
+python image_preprocess.py "load/panda-dance/image.jpg" --size 512 --border_ratio 0.0
+# if you need image caption
+# python image_preprocess.py "load/panda-dance/image.jpg" --size 512 --border_ratio 0.0 --need_caption
+# if you remove backgounrd using other tools like ClipDrop, you need put the processed image to "load/panda-dance/_rgba.png" and add option use_existing_background
+# python image_preprocess.py "load/panda-dance/image.jpg" --size 512 --border_ratio 0.0 --use_existing_background
+cd ../..
+```
+
 
 ## Memory Usage
 **Less VRAM**: The code requires 40GB VRAM in most cases. If you want to reduce the VRAM, you can try the following tricks:
