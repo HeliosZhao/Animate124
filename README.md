@@ -1,7 +1,7 @@
 # Animate124 - threestudio
 
-<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/4c745058-d41f-47dc-aa98-25e06fe602d8" width="" height="200">
-<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/fcf3a7c1-62b4-458b-904e-2749411b7fa6" width="" height="200">
+<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/a592722c-d03c-47e9-aa08-cf099b4cb440" width="" height="200">
+<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/3a103b43-47e0-4da7-a6b6-1abdf42847ee" width="" height="200">
 
 | [Project Page](https://animate124.github.io/) | [Paper](https://arxiv.org/pdf/2311.14603) | [Official Code](https://github.com/HeliosZhao/Animate124) |
 
