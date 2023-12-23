@@ -1,5 +1,8 @@
 # Animate124 - threestudio
 
+<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/4c745058-d41f-47dc-aa98-25e06fe602d8" width="" height="200">
+<img src="https://github.com/HeliosZhao/Animate124/assets/43061147/fcf3a7c1-62b4-458b-904e-2749411b7fa6" width="" height="200">
+
 | [Project Page](https://animate124.github.io/) | [Paper](https://arxiv.org/pdf/2311.14603) | [Official Code](https://github.com/HeliosZhao/Animate124) |
 
 This is Animate124 extension of [threestudio](https://github.com/threestudio-project/threestudio). The original implementation can be found [here](https://github.com/HeliosZhao/Animate124). The backbone (4D hash grid) and some hyperparameters of this implementation differ from those of the original one, so the results might be different. 
