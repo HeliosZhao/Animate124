@@ -18,10 +18,11 @@ https://github.com/HeliosZhao/Animate124/assets/43061147/282e5855-8c40-4375-ab29
 > We introduce Animate124 (Animate-one-image-to-4D), the first work to animate a single in-the-wild image into 3D video through textual motion descriptions, an underexplored problem with significant applications. Our 4D generation leverages an advanced 4D grid dynamic Neural Radiance Field (NeRF) model, optimized in three distinct stages using multiple diffusion priors. Initially, a static model is optimized using the reference image, guided by 2D and 3D diffusion priors, which serves as the initialization for the dynamic NeRF. Subsequently, a video diffusion model is employed to learn the motion specific to the subject. However, the object in the 3D videos tends to drift away from the reference image over time. This drift is mainly due to the misalignment between the text prompt and the reference image in the video diffusion model. In the final stage, a personalized diffusion prior is therefore utilized to address the semantic drift. As the pioneering image-text-to-4D generation framework, our method demonstrates significant advancements over existing baselines, evidenced by comprehensive quantitative and qualitative assessments.
 
 ## News
+- [08/02/2024] Test Benchmark is Released [Here](benchmark/readme.md)!
 - [20/12/2023] The implementation based on [threestudio](https://github.com/threestudio-project/threestudio) is released! Please checkout [this branch](https://github.com/HeliosZhao/Animate124/tree/threestudio).
 - [05/12/2023] Code Released!
 ## TODO
-- [ ] Release the test benchmark.
+- [x] Release the test benchmark.
 - [x] Implementation with [threestudio](https://github.com/threestudio-project/threestudio)
 - [x] Release training code
 
